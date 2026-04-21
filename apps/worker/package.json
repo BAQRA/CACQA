@@ -1,0 +1,33 @@
+{
+  "name": "@cacqa/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@cacqa/browser": "workspace:*",
+    "@cacqa/config": "workspace:*",
+    "@cacqa/core": "workspace:*",
+    "@cacqa/llm": "workspace:*",
+    "@cacqa/oracle": "workspace:*",
+    "@cacqa/storage": "workspace:*",
+    "@cacqa/vision": "workspace:*",
+    "bullmq": "^5.34.6",
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
